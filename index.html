@@ -1,28 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1 class="text-center mt-5 display-4 text-primary">Hello, world! con Github Pages</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <title>My Portfolio</title>
+</head>
+<body>
+    <div class="settings">
+        <div id="theme-icon" class="theme-switch" onclick="switchTheme()">
+            <i class="bi bi-sun-fill light-theme-icon"></i>
+        </div>
+        <div class="language-switch" onclick="switchLanguage()">
+            <img id="language-flag" src="./assets/spanish.png" />
+        </div>
+    </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <div class="section-container">
+        <div id="start" class="section-container__start section-content">
+            <div class="start-content">
+                <div class="start-header">
+                    <div class="header-text">jmmdev.github.io/</div>
+                    <div class="caret"></div>
+                </div>
+                <div id="start-text" class="text-content"></div>
+            </div>
+        </div>
+        <div id="about" class="section-container__about section-content">
+            <div class="about-sm">
+                <img class="my-pic" src="./assets/profile.jpg"/>
+                <div id="about-text" class="about-text">
+                    <div id="about-text-header" class="about-text-header"></div>
+                    <div id="about-text-body" class="about-text-body"></div>
+                </div>
+            </div>
+            <div class="about-lg">
+                <div id="about-text" class="about-text">
+                    <div id="about-text-header-2" class="about-text-header"></div>
+                    <div id="about-text-body-2" class="about-text-body"></div>
+                </div>
+                <img class="my-pic" src="./assets/profile.jpg"/>
+            </div>
+        </div>
+        <div id="work" class="section-container__work section-content">
+            <div class="subheader">
+                <div class="header-stripe"></div>
+                <div id="work-header" class="subheader-text"></div>
+                <div class="header-stripe"></div>
+            </div>
+            <div id="slideshow-container" class="slideshow-container">
+            </div>
+            <div id="gallery-container" class="gallery-container">
+            </div>
+        </div>
+        <div id="skills" class="section-container__skills section-content">
+            <div class="subheader">
+                <div class="header-stripe"></div>
+                <div id="skills-header" class="subheader-text"></div>
+                <div class="header-stripe"></div>
+            </div>
+        </div>
+        <div id="more" class="section-container__contact section-content">
+            <div class="subheader">
+                <div class="header-stripe"></div>
+                <div id="contact-header" class="subheader-text"></div>
+                <div class="header-stripe"></div>
+            </div>
+            <div class="contact-content">
+                <div class="links-container">
+                    <div class="mail-link"><i class="bi bi-envelope-fill"></i><div>josemaria.martin169@gmail.com</div></div>
+                    <div class="link-icons-container">
+                        <div class="link-icon" id="linkedin-link">
+                            <a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-mart%C3%ADn-mu%C3%B1oz-95a464195" target="JES">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                        <div class="link-icon" id="github-link">
+                            <a href="https://github.com/jmmdev" target="JES">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-  </body>
+    <script src="app.js"></script>
+
+    <script>
+        var links = [
+            "https://jmmdev.github.io/weather-app-demo/",
+            "https://jmmdev.github.io/qr-creator/",
+            "",
+            "",
+            "https://github.com/jmmdev/stream-scoreboard"
+        ];
+
+        var slideshowContainer = document.getElementById("slideshow-container");
+        var galleryContainer = document.getElementById("gallery-container");
+
+        for (let i = 0; i < 5; i++){
+            var src = "./assets/slides/slideshow" + (i+1) + ".png";
+            var gImg = new Image();
+            var sImg = new Image();
+            
+            gImg.src = src;
+            sImg.src = src;
+
+            gImg.className = "gallery-picture";
+
+            // New hyperlink
+
+            var pictureLink = document.createElement("a");
+            pictureLink.className = "app-link";
+            pictureLink.href = links[i];
+            pictureLink.target = "EFS";
+
+            // New picture container for gallery
+
+            var pictureContainer = document.createElement("div");
+            pictureContainer.className = "picture-container";
+            pictureContainer.appendChild(gImg);
+
+            // Black frame
+
+            var pictureInfoBg = document.createElement("div");
+            pictureInfoBg.className = "picture-info-bg";
+
+            pictureContainer.appendChild(pictureInfoBg);
+
+
+            // Element with info
+
+            var pictureInfo = document.createElement("div");
+            pictureInfo.className = "picture-info";
+
+            pictureContainer.appendChild(pictureInfo);
+
+            pictureLink.appendChild(pictureContainer);
+
+            // Append to gallery
+
+            galleryContainer.appendChild(pictureLink);
+
+            // Slideshow setup
+
+            // New hyperlink
+
+            var pictureLinkSs = document.createElement("a");
+            pictureLinkSs.className = "app-link my-slides";
+            pictureLinkSs.href = links[i];
+            pictureLinkSs.target = "EFS";
+
+            // New picture container for gallery
+
+            var pictureContainerSs = document.createElement("div");
+            pictureContainerSs.className = "picture-container";
+            pictureContainerSs.appendChild(sImg);
+
+            // Black frame
+
+            var pictureInfoBgSs = document.createElement("div");
+            pictureInfoBgSs.className = "picture-info-bg-ss";
+
+            pictureContainerSs.appendChild(pictureInfoBgSs);
+
+
+            // Element with info
+
+            var pictureInfoSs = document.createElement("div");
+            pictureInfoSs.className = "picture-info-ss";
+
+            pictureContainerSs.appendChild(pictureInfoSs);
+
+            pictureLinkSs.appendChild(pictureContainerSs);
+
+            // Append to slideshow
+
+            slideshowContainer.appendChild(pictureLinkSs);
+        }
+
+        var prevButton = document.createElement("div");
+        var nextButton = document.createElement("div");
+
+        prevButton.innerHTML = '<i class="bi bi-chevron-left" onclick="plusDivs(-1)"></i>';                   
+        nextButton.innerHTML = '<i class="bi bi-chevron-right" onclick="plusDivs(1)"></i></div>';
+        
+        prevButton.className = "previous-button";
+        nextButton.className = "next-button";
+
+        slideshowContainer.appendChild(prevButton);
+        slideshowContainer.appendChild(nextButton);
+    </script>
+
+    <script>
+        if(getCookie("theme") === ""){
+            document.cookie = "theme=dark";
+        }
+
+        setTheme();
+
+        if(getCookie("language") === ""){
+            document.cookie = "language=spanish";
+        }
+            
+        setLanguage();
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        var lastIndex = 1;
+
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("my-slides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+
+            if(slideIndex === x.length && lastIndex === 1 && x.length > 2){
+                x[slideIndex-1].className = "my-slides w3-animate-left";
+            }else if((slideIndex === 1 && lastIndex === x.length && x.length > 2)){
+                x[slideIndex-1].className = "my-slides w3-animate-right";
+            }
+            else if(slideIndex > lastIndex){
+                x[slideIndex-1].className = "my-slides w3-animate-right";
+            }else if(slideIndex < lastIndex){
+                x[slideIndex-1].className = "my-slides w3-animate-left";
+            }
+          
+            x[slideIndex-1].style.display = "block";
+
+            lastIndex = slideIndex;
+        }
+        </script>
+    </body>
 </html>
-
