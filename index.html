@@ -121,7 +121,7 @@
             // New picture container for gallery
 
             var pictureContainer = document.createElement("div");
-            pictureContainer.className = "picture-container";
+            pictureContainer.className = "gallery-pic-container";
             pictureContainer.appendChild(gImg);
 
             // Black frame
@@ -188,8 +188,8 @@
         prevButton.innerHTML = '<i class="bi bi-chevron-left" onclick="plusDivs(-1)"></i>';                   
         nextButton.innerHTML = '<i class="bi bi-chevron-right" onclick="plusDivs(1)"></i></div>';
         
-        prevButton.className = "previous-button";
-        nextButton.className = "next-button";
+        prevButton.className = "slide-control previous-button";
+        nextButton.className = "slide-control next-button";
 
         slideshowContainer.appendChild(prevButton);
         slideshowContainer.appendChild(nextButton);
