@@ -70,13 +70,15 @@ function setLanguage(){
     var spanishApps = [
         "Una aplicación sencilla que utiliza la API del tiempo de openweathermap.org",
         "Generador de códigos QR con algunas opciones de personalización",
-        "Una aplicación de escritorio en C# que gestiona archivos de texto de OBS enfocada a juegos de lucha"
+        "Una aplicación de escritorio en C# que gestiona archivos de texto de OBS enfocada a juegos de lucha",
+        "Un clon de Netflix que usa memes en lugar de series o películas para mostrar el contenido (WIP)",
     ];
 
     var englishApps = [
         "A simple application using openweathermap.org weather API",
         "QR generator with some customization options",
-        "A C# desktop application that manages OBS text files focused on fighting videogames"
+        "A C# desktop application that manages OBS text files focused on fighting videogames",
+        "A Netflix clone that shows memes instead of TV shows or movies (WIP)",
     ];
 
     var appsInfo = document.getElementsByClassName("picture-info");
