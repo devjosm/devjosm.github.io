@@ -221,7 +221,6 @@ body {
 }
 
 .picture-info {
-  font-size: 1.3vw;
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
   width: 100%;
@@ -238,7 +237,6 @@ body {
 }
 
 .picture-info-ss {
-  font-size: 3vw;
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
   width: 100%;
@@ -398,6 +396,15 @@ body {
   .slideshow-container img {
     width: 100%;
     object-fit: cover;
+  }
+
+  .picture-info {
+    font-size: 1.3vw;
+  }
+
+
+  .picture-info-ss {
+    font-size: 3vw;
   }
 
   .mail-link {
