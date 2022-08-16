@@ -78,7 +78,7 @@ function setLanguage(){
         "A simple application using openweathermap.org weather API",
         "QR generator with some customization options",
         "A C# desktop application that manages OBS text files focused on fighting videogames",
-        "A Netflix clone that shows memes instead of TV shows or movies (WIP)",
+        "A Netflix clone that displays memes instead of TV shows or movies (WIP)",
     ];
 
     var appsInfo = document.getElementsByClassName("picture-info");
