@@ -97,12 +97,13 @@
             "https://jmmdev.github.io/qr-creator/",
             "https://github.com/jmmdev/stream-scoreboard",
             "http://jmmdev.github.io/devflix-react",
+            "http://jmmdev.github.io/stage-striking",
         ];
 
         var slideshowContainer = document.getElementById("slideshow-container");
         var galleryContainer = document.getElementById("gallery-container");
 
-        for (let i = 0; i < 4; i++){
+        for (let i = 0; i < links.length; i++){
             var src = "./assets/slides/slideshow" + (i+1) + ".png";
             var gImg = new Image();
             var sImg = new Image();
