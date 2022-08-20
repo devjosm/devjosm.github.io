@@ -71,7 +71,7 @@ function setLanguage(){
         "Una aplicación sencilla que utiliza la API del tiempo de openweathermap.org",
         "Generador de códigos QR con algunas opciones de personalización",
         "Una aplicación de escritorio en C# que gestiona archivos de texto de OBS enfocada a juegos de lucha",
-        "Un clon de Netflix que usa memes en lugar de series o películas para mostrar el contenido (en proceso)",
+        "Un clon de Netflix que muestra memes en lugar de series o películas (en proceso)",
         "Una herramienta de selección de escenarios para Super Smash Bros Ultimate (terminales pequeños)"
     ];
 
