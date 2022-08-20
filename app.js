@@ -71,7 +71,7 @@ function setLanguage(){
         "Una aplicación sencilla que utiliza la API del tiempo de openweathermap.org",
         "Generador de códigos QR con algunas opciones de personalización",
         "Una aplicación de escritorio en C# que gestiona archivos de texto de OBS enfocada a juegos de lucha",
-        "Un clon de Netflix que usa memes en lugar de series o películas para mostrar el contenido (WIP)",
+        "Un clon de Netflix que usa memes en lugar de series o películas para mostrar el contenido (en proceso)",
         "Una herramienta de selección de escenarios para Super Smash Bros Ultimate (terminales pequeños)"
     ];
 
@@ -79,7 +79,7 @@ function setLanguage(){
         "A simple application using openweathermap.org weather API",
         "QR generator with some customization options",
         "A C# desktop application that manages OBS text files focused on fighting videogames",
-        "A Netflix clone that displays memes instead of TV shows or movies (WIP)",
+        "A Netflix clone that displays memes instead of TV shows or movies (work in progress)",
         "A stage striking tool for Super Smash Bros Ultimate players, targeted for smaller devices"
     ];
 
