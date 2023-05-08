@@ -135,7 +135,7 @@ body {
   width: fit-content;
   margin: 0 5%;
   color: var(--text-color);
-  font-family: developeFont;
+  font-family: developeBoldFont;
 }
 
 .header-stripe {
@@ -166,12 +166,22 @@ body {
   flex-wrap: wrap;
 }
 
-.skills-content > p {
+.skills-content > div {
+  display: flex;
   flex-grow: 1;
-  width: 33%;
-  font-size: 32px;
-  text-align: center;
+  min-height: 100px;
+  height: 10vh;
+  align-items: center;
+  padding: 8px;
+}
+
+.skills-content > div > p {
+  width: 100%;
+  margin: 0;
+  font-family: developeFont;
   color: var(--text-color);
+  text-align: center;
+  padding: 4px;
 }
 
 .slideshow-container {
@@ -414,9 +424,17 @@ body {
     font-size: 1.3vw;
   }
 
-
   .picture-info-ss {
     font-size: 3vw;
+  }
+
+  .skills-content > div {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  .skills-content > div > p {
+    font-size: 1.8em;
   }
 
   .mail-link {
@@ -453,6 +471,15 @@ body {
 
   .subheader-text {
     font-size: 3em;
+  }
+
+  .skills-content > div {
+    width: 33%;
+    max-width: 33%;
+  }
+
+  .skills-content > div > p {
+    font-size: 2.2em;
   }
 
   .caret {
