@@ -68,19 +68,19 @@ function switchLanguage(){
 
 function setLanguage(){
     var spanishApps = [
-        "Una aplicación sencilla que utiliza la API del tiempo de openweathermap.org",
+        "Sitio web sencillo que utiliza la API del tiempo de openweathermap.org",
         "Generador de códigos QR con algunas opciones de personalización",
-        "Una aplicación de escritorio en C# que gestiona archivos de texto de OBS enfocada a juegos de lucha",
-        "Un clon de Netflix que muestra memes en lugar de series o películas (en proceso)",
-        "Una herramienta de selección de escenarios para Super Smash Bros Ultimate (terminales pequeños)"
+        "Aplicación de escritorio en C# que gestiona archivos de texto de OBS enfocada a juegos de lucha",
+        "Clon de Netflix que muestra memes en lugar de series o películas (en proceso)",
+        "Herramienta de selección de escenarios para Super Smash Bros Ultimate (terminales pequeños)"
     ];
 
     var englishApps = [
-        "A simple application using openweathermap.org weather API",
+        "Simple application using openweathermap.org weather API",
         "QR generator with some customization options",
-        "A C# desktop application that manages OBS text files focused on fighting videogames",
-        "A Netflix clone that displays memes instead of TV shows or movies (work in progress)",
-        "A stage striking tool for Super Smash Bros Ultimate players, targeted for smaller devices"
+        "C# desktop application that manages OBS text files focused on fighting videogames",
+        "Netflix clone that displays memes instead of TV shows or movies (work in progress)",
+        "Stage striking tool for Super Smash Bros Ultimate players, targeted for smaller devices"
     ];
 
     var appsInfo = document.getElementsByClassName("picture-info");
@@ -93,11 +93,10 @@ function setLanguage(){
     var aboutBody = document.getElementById("about-text-body");
     var aboutBody2 = document.getElementById("about-text-body-2");
     var workHeader = document.getElementById("work-header");
+    var skillsHeader = document.getElementById("skills-header");
     var contactHeader = document.getElementById("contact-header");
 
     var languageFlag = document.getElementById("language-flag");
-    
-    var about = document.getElementById("about-text");
 
     if(language === "spanish") {
         aboutHeader.innerHTML = '¡Hola!';
@@ -109,6 +108,7 @@ function setLanguage(){
                               
         
         workHeader.innerHTML = 'Proyectos';
+        skillsHeader.innerHTML = 'Aptitudes';
         contactHeader.innerHTML = 'Contacto';
 
         languageFlag.src = "./assets/spanish.png";
@@ -128,6 +128,7 @@ function setLanguage(){
         "<p>If you liked it and you're into contacting me I left you some options at the end of this site. Farewell!</p>";
 
         workHeader.innerHTML = 'Work';
+        skillsHeader.innerHTML = 'Skills';
         contactHeader.innerHTML = 'Contact';
 
         languageFlag.src = "./assets/english.png";
@@ -153,4 +154,4 @@ function getCookie(cname) {
       }
     }
     return "";
-  }
+}
