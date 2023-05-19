@@ -3,7 +3,7 @@ var darkButton = document.getElementById('dark-mode-button');
 var lightButton = document.getElementById('light-mode-button');
 
 function switchTheme(){
-    var theme = getCookie("theme");
+    let theme = getCookie("theme");
 
     if(theme === "light"){
         document.cookie = "theme=dark";
@@ -15,7 +15,7 @@ function switchTheme(){
 }
 
 function setTheme(){
-    var theme = getCookie("theme");
+    let theme = getCookie("theme");
 
     if(theme === "dark") {
         toggleDarkMode();
@@ -30,12 +30,12 @@ function toggleLightMode(){
     r.style.setProperty('--bg-color', '#ffffff');
     r.style.setProperty('--navbar-color', '#eeeeee');
     r.style.setProperty('--icon-color', '#ff3b00');
-    r.style.setProperty('--highlight-color','#0044ff');
+    r.style.setProperty('--highlight-color','#0077ff');
     r.style.setProperty('--text-color', '#000000');
     r.style.setProperty('--inner-toggle-color', '#00aaff');
     r.style.setProperty('--bg-image', 'url("./assets/bg-light.png")');
 
-    var modeIcon = document.getElementById("theme-icon");
+    const modeIcon = document.getElementById("theme-icon");
     modeIcon.innerHTML = '<i class="bi bi-sun-fill light-theme-icon"></i>';
 }
 
@@ -48,12 +48,12 @@ function toggleDarkMode(){
     r.style.setProperty('--inner-toggle-color', '#000022');
     r.style.setProperty('--bg-image', 'url("./assets/bg-dark.png")');
 
-    var modeIcon = document.getElementById("theme-icon");
+    const modeIcon = document.getElementById("theme-icon");
     modeIcon.innerHTML = '<i class="bi bi-moon-fill dark-theme-icon"></i>';
 }
 
 function switchLanguage(){
-    var language = getCookie("language");
+    let language = getCookie("language");
 
     if(language === "english"){
         document.cookie = "language=spanish";
@@ -66,23 +66,25 @@ function switchLanguage(){
     setLanguage();
 }
 
+const spanishApps = [
+    "Sitio web sencillo que utiliza la API del tiempo de openweathermap.org",
+    "Generador de códigos QR con algunas opciones de personalización",
+    "Aplicación de escritorio que gestiona archivos de texto de OBS enfocada a juegos de lucha (Windows)",
+    "Herramienta de selección de escenarios para Super Smash Bros Ultimate (terminales pequeños)",
+    "App multiusos diseñada para todo tipo de jugadores y coleccionistas de Yu-Gi-Oh!",
+    "Clon de Netflix que muestra memes en lugar de series o películas (en proceso)",
+];
+
+const englishApps = [
+    "Simple application using openweathermap.org weather API",
+    "QR generator with some customization options",
+    "Desktop application that manages OBS text files focused on fighting videogames (Windows)",
+    "Stage striking tool for Super Smash Bros Ultimate players, targeted for smaller devices",
+    "App with different tools designed for all kinds of Yu-Gi-Oh! players and collectors (Android)",
+    "Netflix clone that displays memes instead of TV shows or movies (work in progress)",
+];
+
 function setLanguage(){
-    var spanishApps = [
-        "Sitio web sencillo que utiliza la API del tiempo de openweathermap.org",
-        "Generador de códigos QR con algunas opciones de personalización",
-        "Aplicación de escritorio en C# que gestiona archivos de texto de OBS enfocada a juegos de lucha",
-        "Clon de Netflix que muestra memes en lugar de series o películas (en proceso)",
-        "Herramienta de selección de escenarios para Super Smash Bros Ultimate (terminales pequeños)"
-    ];
-
-    var englishApps = [
-        "Simple application using openweathermap.org weather API",
-        "QR generator with some customization options",
-        "C# desktop application that manages OBS text files focused on fighting videogames",
-        "Netflix clone that displays memes instead of TV shows or movies (work in progress)",
-        "Stage striking tool for Super Smash Bros Ultimate players, targeted for smaller devices"
-    ];
-
     var appsInfo = document.getElementsByClassName("picture-info");
     var appsInfoSs = document.getElementsByClassName("picture-info-ss");
 

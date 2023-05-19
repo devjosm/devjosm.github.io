@@ -75,6 +75,7 @@
                 <div><p>C#</p></div>
                 <div><p>AngularJS</p></div>
                 <div><p>SQLite</p></div>
+                <div><p>GraphQL</p></div>
                 <div><p>Java</p></div>
                 <div><p>PHP</p></div>
                 <div><p>C++</p></div>
@@ -110,87 +111,125 @@
     <script src="app.js"></script>
 
     <script>
-        var links = [
+        const links = [
             "https://jmmdev.github.io/weather-app-demo/",
             "https://jmmdev.github.io/qr-creator/",
             "https://github.com/jmmdev/stream-scoreboard",
-            "http://jmmdev.github.io/devflix-react",
             "http://jmmdev.github.io/stage-striking",
+            "https://github.com/jmmdev/ygo-tools",
+            "http://jmmdev.github.io/devflix-react",
         ];
 
-        var slideshowContainer = document.getElementById("slideshow-container");
-        var galleryContainer = document.getElementById("gallery-container");
+        const skills = [
+            ['html', 'css', 'javascript'],
+            ['html', 'css', 'javascript'],
+            ['c-sharp', 'graphql', 'windows'],
+            ['html', 'css', 'javascript'],
+            ['html', 'css', 'javascript', 'react', 'android'],
+            ['html', 'css', 'javascript', 'react'],
+        ];
+
+        const slideshowContainer = document.getElementById("slideshow-container");
+        const galleryContainer = document.getElementById("gallery-container");
 
         for (let i = 0; i < links.length; i++){
-            var src = "./assets/slides/slideshow" + (i+1) + ".png";
-            var gImg = new Image();
-            var sImg = new Image();
+            let src = "./assets/slides/slideshow" + (i+1) + ".png";
+            let gImg = new Image();
+            let sImg = new Image();
             
             gImg.src = src;
             sImg.src = src;
+
+            ////// Gallery setup
 
             gImg.className = "gallery-picture";
 
             // New hyperlink
 
-            var pictureLink = document.createElement("a");
+            let pictureLink = document.createElement("a");
             pictureLink.className = "app-link";
             pictureLink.href = links[i];
             pictureLink.target = "EFS";
 
             // New picture container for gallery
 
-            var pictureContainer = document.createElement("div");
+            let pictureContainer = document.createElement("div");
             pictureContainer.className = "gallery-pic-container";
             pictureContainer.appendChild(gImg);
 
             // Black frame
 
-            var pictureInfoBg = document.createElement("div");
+            let pictureInfoBg = document.createElement("div");
             pictureInfoBg.className = "picture-info-bg";
 
             pictureContainer.appendChild(pictureInfoBg);
 
+            // Element with icons
+            let skillsInfo = document.createElement("div");
+            skillsInfo.className = "skills-info";
+
+            for (let icon of skills[i]) {
+                let iconImg = new Image();
+                iconImg.src = "./assets/icons/" + icon + ".png";
+                iconImg.className = "picture-icon";
+                skillsInfo.appendChild(iconImg);
+            }
+
+            pictureContainer.appendChild(skillsInfo);
+
 
             // Element with info
-
-            var pictureInfo = document.createElement("div");
+            let pictureInfo = document.createElement("div");
             pictureInfo.className = "picture-info";
 
             pictureContainer.appendChild(pictureInfo);
 
+            // Append full container
             pictureLink.appendChild(pictureContainer);
 
             // Append to gallery
-
             galleryContainer.appendChild(pictureLink);
 
-            // Slideshow setup
+            //-----------------------------------------------------------
+
+            //////// Slideshow setup
 
             // New hyperlink
 
-            var pictureLinkSs = document.createElement("a");
+            let pictureLinkSs = document.createElement("a");
             pictureLinkSs.className = "app-link my-slides";
             pictureLinkSs.href = links[i];
             pictureLinkSs.target = "EFS";
 
             // New picture container for gallery
 
-            var pictureContainerSs = document.createElement("div");
+            let pictureContainerSs = document.createElement("div");
             pictureContainerSs.className = "picture-container";
             pictureContainerSs.appendChild(sImg);
 
             // Black frame
 
-            var pictureInfoBgSs = document.createElement("div");
+            let pictureInfoBgSs = document.createElement("div");
             pictureInfoBgSs.className = "picture-info-bg-ss";
 
             pictureContainerSs.appendChild(pictureInfoBgSs);
 
+             // Element with icons
+             let skillsInfoSs = document.createElement("div");
+            skillsInfoSs.className = "skills-info-ss";
+
+            for (let icon of skills[i]) {
+                let iconImg = new Image();
+                iconImg.src = "./assets/icons/" + icon + ".png";
+                iconImg.className = "picture-icon";
+                skillsInfoSs.appendChild(iconImg);
+            }
+
+            pictureContainerSs.appendChild(skillsInfoSs);
 
             // Element with info
 
-            var pictureInfoSs = document.createElement("div");
+            let pictureInfoSs = document.createElement("div");
             pictureInfoSs.className = "picture-info-ss";
 
             pictureContainerSs.appendChild(pictureInfoSs);
@@ -202,8 +241,8 @@
             slideshowContainer.appendChild(pictureLinkSs);
         }
 
-        var prevButton = document.createElement("div");
-        var nextButton = document.createElement("div");
+        const prevButton = document.createElement("div");
+        const nextButton = document.createElement("div");
 
         prevButton.innerHTML = '<i class="bi bi-chevron-left" onclick="plusDivs(-1)"></i>';                   
         nextButton.innerHTML = '<i class="bi bi-chevron-right" onclick="plusDivs(1)"></i></div>';
@@ -216,13 +255,13 @@
     </script>
 
     <script>
-        if(getCookie("theme") === ""){
+        if (getCookie("theme") === ""){
             document.cookie = "theme=dark";
         }
 
         setTheme();
 
-        if(getCookie("language") === ""){
+        if (getCookie("language") === ""){
             document.cookie = "language=spanish";
         }
             
@@ -230,8 +269,8 @@
     </script>
 
     <script>
-        var slideIndex = 1;
-        var lastIndex = 1;
+        let slideIndex = 1;
+        let lastIndex = 1;
 
         showDivs(slideIndex);
         
@@ -240,8 +279,8 @@
         }
         
         function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("my-slides");
+            let i;
+            let x = document.getElementsByClassName("my-slides");
             if (n > x.length) {
                 slideIndex = 1
             }
@@ -252,14 +291,16 @@
                 x[i].style.display = "none";  
             }
 
-            if(slideIndex === x.length && lastIndex === 1 && x.length > 2){
+            if (slideIndex === x.length && lastIndex === 1 && x.length > 2){
                 x[slideIndex-1].className = "my-slides w3-animate-left";
-            }else if((slideIndex === 1 && lastIndex === x.length && x.length > 2)){
+            }
+            else if (slideIndex === 1 && lastIndex === x.length && x.length > 2){
                 x[slideIndex-1].className = "my-slides w3-animate-right";
             }
-            else if(slideIndex > lastIndex){
+            else if (slideIndex > lastIndex){
                 x[slideIndex-1].className = "my-slides w3-animate-right";
-            }else if(slideIndex < lastIndex){
+            }
+            else if (slideIndex < lastIndex){
                 x[slideIndex-1].className = "my-slides w3-animate-left";
             }
           
