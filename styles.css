@@ -234,7 +234,8 @@ body {
 }
 
 .gallery-pic-container:hover {
-  box-shadow: 0 0 0 3px var(--highlight-color);
+  animation: border 0.2s linear;
+  animation-fill-mode: forwards;
 }
 
 .gallery-pic-container:hover > .picture-info-bg {
@@ -248,13 +249,13 @@ body {
   height: 25%;
   padding: 1% 2% 0 2%;
   transform: none;
-  visibility: hidden;
   display: flex;
   align-items: center;
   position: absolute;
   top: 100%;
   left: 0;
   transform: translateY(-100%);
+  opacity: 0%;
 }
 
 .skills-info {
@@ -267,7 +268,7 @@ body {
   left: 0;
   padding: 12px;
   gap: 1%;
-  visibility: hidden;
+  opacity: 0%;
 }
 
 .picture-icon {
@@ -302,11 +303,13 @@ body {
 }
 
 .gallery-pic-container:hover > .picture-info{
-  visibility: visible;
+  animation: fade-in 0.2s linear;
+  animation-fill-mode: forwards;
 }
 
 .gallery-pic-container:hover > .skills-info{
-  visibility: visible;
+  animation: fade-in 0.2s linear;
+  animation-fill-mode: forwards;
 }
 
 .slide-control {
@@ -602,6 +605,26 @@ body {
   }
 
   99% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes border {
+  0% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: 0 0 0 3px var(--highlight-color);
+  }
+}
+
+@keyframes fade-in {
+  0% {
     opacity: 0%;
   }
 
