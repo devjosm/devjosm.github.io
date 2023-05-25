@@ -221,6 +221,8 @@ body {
   transform-origin: top;
   display: flex;
   align-items: center;
+  height: 25%;
+  opacity: 0%;
 }
 
 .picture-info-bg-ss {
@@ -230,7 +232,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  transform: translateY(-100%);
+  transform: translateY(-99%);
 }
 
 .gallery-pic-container:hover {
@@ -239,7 +241,8 @@ body {
 }
 
 .gallery-pic-container:hover > .picture-info-bg {
-  height: 25%;
+  animation: fade-in 0.2s linear;
+  animation-fill-mode: forwards;
 }
 
 .picture-info {
