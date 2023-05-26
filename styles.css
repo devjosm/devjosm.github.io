@@ -236,12 +236,12 @@ body {
 }
 
 .gallery-pic-container:hover {
-  animation: border 0.2s linear;
+  animation: border 0.1s linear;
   animation-fill-mode: forwards;
 }
 
 .gallery-pic-container:hover > .picture-info-bg {
-  animation: fade-in 0.2s linear;
+  animation: fade-in 0.1s linear;
   animation-fill-mode: forwards;
 }
 
@@ -306,12 +306,12 @@ body {
 }
 
 .gallery-pic-container:hover > .picture-info{
-  animation: fade-in 0.2s linear;
+  animation: fade-in 0.1s linear;
   animation-fill-mode: forwards;
 }
 
 .gallery-pic-container:hover > .skills-info{
-  animation: fade-in 0.2s linear;
+  animation: fade-in 0.1s linear;
   animation-fill-mode: forwards;
 }
 
