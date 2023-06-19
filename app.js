@@ -73,6 +73,7 @@ const spanishApps = [
     "Herramienta de selección de escenarios para Super Smash Bros Ultimate (terminales pequeños)",
     "App multiusos diseñada para todo tipo de jugadores y coleccionistas de Yu-Gi-Oh!",
     "Clon de Netflix que muestra memes en lugar de series o películas (en proceso)",
+    "Bot de Telegram creado para gestionar asistentes y otros aspectos de quedadas gaming presenciales",
 ];
 
 const englishApps = [
@@ -82,6 +83,7 @@ const englishApps = [
     "Stage striking tool for Super Smash Bros Ultimate players, targeted for smaller devices",
     "App with different tools designed for all kinds of Yu-Gi-Oh! players and collectors (Android)",
     "Netflix clone that displays memes instead of TV shows or movies (work in progress)",
+    "Telegram bot created for local gaming meet-ups management",
 ];
 
 function setLanguage(){
